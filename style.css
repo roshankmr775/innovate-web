@@ -1,0 +1,293 @@
+@font-face {
+  font-family: "Rejouice Headline";
+  src: url("Rejouice-Headline.woff2") format("woff2"),
+    url("Rejouice-Headline.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NB International Pro";
+  src: url("NBInternationalProBoo.woff2") format("woff2"),
+    url("NBInternationalProBoo.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "NB International Pro";
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+  position: relative;
+}
+
+#cursor {
+  height: 7vw;
+  width: 7vw;
+  background-color: #ff5f38;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+#cursor h5 {
+  font-size: 1.15vw;
+}
+
+#page1 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+#page1-content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 5vw;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3vw 3vw;
+}
+
+nav h3 {
+  font-size: 1.5vw;
+  font-weight: 100;
+}
+
+nav h4 {
+  font-size: 1.2vw;
+  font-weight: 100;
+}
+
+#page1-content h1 {
+  font-family: "Rejouice Headline";
+  font-size: 25vw;
+  font-weight: 100;
+  line-height: 25vw;
+}
+
+#page1-content h1 span {
+  font-family: "Rejouice Headline";
+  display: inline-block;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+}
+
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 3vw;
+}
+
+#page3-top {
+  text-align: center;
+}
+
+#page3-top h4 {
+  margin-bottom: 1vw;
+  font-weight: 500;
+  font-size: 1vw;
+}
+
+#page3-top h2 {
+  font-size: 4vw;
+  font-weight: 500;
+}
+
+#page3-top h4 span {
+  font-size: 0.7vw;
+  background-color: black;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 10px;
+}
+
+#page3-elements {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10vw;
+}
+
+#page3-elements .box {
+  height: 100%;
+  width: 32.5%;
+  position: relative;
+}
+
+#page3-elements .box video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#page3-elements .box img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all linear 0.8s;
+}
+
+#page3-elements .box:hover img {
+  opacity: 0;
+}
+
+#page4 {
+  height: 100vh;
+  width: 100%;
+  padding: 4vh 0;
+  position: relative;
+}
+
+#page4 h1 {
+  font-size: 10vw;
+  font-family: "Rejouice Headline";
+  padding-top: 8vw;
+  font-weight: 100;
+  border-bottom: 1px solid black;
+  width: 96%;
+  margin-left: 2%;
+}
+
+#swiperdiv {
+  height: 60vh;
+  width: 100%;
+  position: relative;
+  margin-top: -7%;
+}
+
+.swiper {
+  width: 120%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 18%;
+  object-fit: cover;
+}
+
+#loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  gap: 10px;
+}
+
+#loader h3 {
+  margin-top: 20%;
+  font-size: 1.4vw;
+  font-family: "NB International Pro";
+  font-weight: 100;
+}
+
+/* #page2 h3 {
+
+  font-size: 70px;
+  margin-top: 4vh;
+  margin-left: 3vw;
+  gap: 20px;
+  font-weight: 100;
+  text-indent: 150px;
+  line-height: 1.1;
+
+} */
+
+.tagline {
+  font-weight: 100;
+  font-size: 25px;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  margin-top: 100px;
+  /* background-color: red; */
+  border-bottom: 1px solid black;
+}
+
+#page2 h3 {
+  font-size: 70px;
+  margin-top: 4vh;
+  margin-left: 3vw;
+  gap: 20px;
+  font-weight: 100;
+  text-indent: 150px;
+  line-height: 1.1;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+#foot {
+  background-color: black;
+  padding: 50px;
+  margin: 0;
+  color: white;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#page2,
+#page3,
+#page4 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 
+#page4 {
+  background-color: blue;
+}
+
+#page5 {
+  background-color: red;
+}
+
+#main {
+  background-color: aqua;
+} */
